@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import './Product.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -17,12 +17,15 @@ const Product = (props) => {
                 <h4 className="product-name">{name}</h4>
                 <p><small>by:{seller}</small></p>
                 <p>Price: ${price}</p>
-                <Rating
-                    initialRating={star}
-                    emptySymbol="far fa-star"
-                    fullSymbol="fas fa-star"
-                    readonly
-                />
+                {
+                    <Rating
+                        initialRating={star}
+                        emptySymbol="far fa-star"
+                        fullSymbol="fas fa-star"
+                        readonly
+                    />
+
+                }
 
                 <p><small>only {stock} left in stock - order soon</small></p>
                 <button
