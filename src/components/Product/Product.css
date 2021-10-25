@@ -12,8 +12,8 @@
 }
 .btn-regular{
     background-color: goldenrod;
-    width:150px;
-    height:30px;
+    width:auto;
+    height:35px;
     border:1px solid lightgray;
     border-radius: 5px;
     cursor:pointer;
